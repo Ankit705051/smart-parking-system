@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Parking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🚗 Smart Parking System</h1>
+    <span id="statusBadge" class="status-badge">Connecting...</span>
+
+    <div class="card">
+        <h2>Park Vehicle</h2>
+        <input id="parkPlate" placeholder="Plate">
+        <select id="parkType">
+            <option>Car</option>
+            <option>Bike</option>
+            <option>Truck</option>
+            <option>Van</option>
+        </select>
+        <input id="parkColor" placeholder="Color">
+        <button onclick="parkVehicle()">Park</button>
+    </div>
+
+    <div class="card">
+        <h2>Exit Vehicle</h2>
+        <input id="exitPlate" placeholder="Plate">
+        <button onclick="exitVehicle()">Exit</button>
+    </div>
+
+    <h2>Status</h2>
+    <p>Total: <span id="totalSpots"></span></p>
+    <p>Occupied: <span id="occupiedSpots"></span></p>
+    <p>Available: <span id="availableSpots"></span></p>
+    <p>Revenue: $<span id="totalRevenue"></span></p>
+
+    <h2>Parking Spots</h2>
+    <div id="spotsContainer" class="grid"></div>
+
+    <h2>Tickets</h2>
+    <div id="ticketsContainer"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
